@@ -1,61 +1,57 @@
 # Data Cleaning - Bank Marketing
 
-Projeto de limpeza e formatação dos dados brutos de `bank_marketing.csv`, criando três arquivos
-prontos para análise: `client.csv`, `campaign.csv` e `economics.csv`.
+Project for cleaning and formatting raw data from `bank_marketing.csv`, generating three analysis-ready files: `client.csv`, `campaign.csv`, and `economics.csv`.
 
-## Requisitos
+## Requirements
 
-Python 3.10 ou superior, com as seguintes bibliotecas:
+Python 3.10 or later, with the following libraries:
 
-    pandas
-    numpy
+* pandas
+* numpy
 
-Para instalar:
+To install:
 
 ```bash
 pip install pandas numpy
 ```
 
-## Como executar
+## How to Run
 
-1. Certifique-se de que `bank_marketing.csv` está na raiz do projeto.
-2. Abra o notebook `Project_DataCleaningBank.ipynb`.
-3. Execute todas as células em ordem.
-4. Os arquivos `client.csv`, `campaign.csv` e `economics.csv` serão gerados na pasta do projeto.
+1. Make sure `bank_marketing.csv` is located in the project's root directory.
+2. Open the notebook `Project_DataCleaningBank.ipynb`.
+3. Run all cells in order.
+4. The files `client.csv`, `campaign.csv`, and `economics.csv` will be generated in the project folder.
 
-## Regras de limpeza
+## Data Cleaning Rules
 
 ### client.csv
 
-| Coluna           | Transformação                                        |
-| ---------------- | ---------------------------------------------------- |
-| `job`            | Substitui `.` por `_`                                |
-| `education`      | Substitui `.` por `_`; converte `"unknown"` para NaN |
-| `credit_default` | 1 se `"yes"`, caso contrário 0                       |
-| `mortgage`       | 1 se `"yes"`, caso contrário 0                       |
+| Column           | Transformation                                   |
+| ---------------- | ------------------------------------------------ |
+| `job`            | Replace `.` with `_`                             |
+| `education`      | Replace `.` with `_`; convert `"unknown"` to NaN |
+| `credit_default` | 1 if `"yes"`, otherwise 0                        |
+| `mortgage`       | 1 if `"yes"`, otherwise 0                        |
 
 ### campaign.csv
 
-| Coluna              | Transformação                                                            |
-| ------------------- | ------------------------------------------------------------------------ |
-| `campaign_outcome`  | 1 se `"yes"`, caso contrário 0                                           |
-| `previous_outcome`  | 1 se `"success"`, caso contrário 0                                       |
-| `last_contact_date` | Criada a partir de `day` + `month` + ano fixo 2022; formato `YYYY-MM-DD` |
+| Column              | Transformation                                                      |
+| ------------------- | ------------------------------------------------------------------- |
+| `campaign_outcome`  | 1 if `"yes"`, otherwise 0                                           |
+| `previous_outcome`  | 1 if `"success"`, otherwise 0                                       |
+| `last_contact_date` | Created from `day` + `month` + fixed year 2022; format `YYYY-MM-DD` |
 
 ### economics.csv
 
-| Coluna                 | Transformação                      |
-| ---------------------- | ---------------------------------- |
-| `cons_price_idx`       | Mantido como float, sem alterações |
-| `euribor_three_months` | Mantido como float, sem alterações |
+| Column                 | Transformation            |
+| ---------------------- | ------------------------- |
+| `cons_price_idx`       | Kept as float, no changes |
+| `euribor_three_months` | Kept as float, no changes |
 
-## Observações
+## Notes
 
-A função auxiliar `one_if(column, value)` centraliza a conversão de colunas categóricas para binário
-(0/1), evitando repetição de lógica no notebook.
+The helper function `one_if(column, value)` centralizes the conversion of categorical columns into binary values (0/1), avoiding repeated logic throughout the notebook.
 
-O ano 2022 é fixo na construção de `last_contact_date`. Caso os dados sejam de outro período, ajuste
-o valor diretamente no notebook antes de executar.
+The year 2022 is fixed when building `last_contact_date`. If the data corresponds to a different period, adjust the year directly in the notebook before running it.
 
-Se alguma coluna esperada não for encontrada, verifique se os nomes no CSV de entrada correspondem
-exatamente aos utilizados no notebook.
+If any expected column cannot be found, verify that the column names in the input CSV exactly match those used in the notebook.
