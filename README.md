@@ -1,13 +1,13 @@
-# Data Cleaning — Bank Marketing
+# Data Cleaning - Bank Marketing
 
-Pipeline de limpeza e reformatação dos dados brutos de `bank_marketing.csv`, gerando três arquivos
+Projeto de limpeza e reformatação dos dados brutos de `bank_marketing.csv`, criando três arquivos
 prontos para análise: `client.csv`, `campaign.csv` e `economics.csv`.
 
 ## Estrutura do projeto
 
-. ├── bank_marketing.csv # Dados brutos de entrada a serem tratados ├──
-Project_DataCleaningBank.ipynb # Notebook principal com toda a lógica └── piggy_bank.jpg # Imagem
-ilustrativa usada no notebook
+. ├── bank_marketing.csv # Dados brutos de entrada a serem tratados 
+  ├──Project_DataCleaningBank.ipynb # Notebook principal com toda a lógica 
+  └── piggy_bank.jpg # Imagem ilustrativa usada no notebook
 
 ## Requisitos
 
