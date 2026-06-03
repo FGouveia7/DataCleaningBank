@@ -1,6 +1,6 @@
 # Data Cleaning - Bank Marketing
 
-Projeto de limpeza e reformatação dos dados brutos de `bank_marketing.csv`, criando três arquivos
+Projeto de limpeza e formatação dos dados brutos de `bank_marketing.csv`, criando três arquivos
 prontos para análise: `client.csv`, `campaign.csv` e `economics.csv`.
 
 ## Requisitos
